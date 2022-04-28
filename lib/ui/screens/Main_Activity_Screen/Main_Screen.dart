@@ -16,7 +16,7 @@ class MainActivity extends StatefulWidget {
 }
 
 class _MainActivityState extends State<MainActivity> {
-  int currentindex = 4;
+  int currentindex = 0;
 
   @override
   void initState() {
@@ -32,7 +32,8 @@ class _MainActivityState extends State<MainActivity> {
     final devicesize = MediaQuery.of(context).size;
     return SafeArea(
       child: Platform.isAndroid
-          ? Scaffold(
+            ?
+            Scaffold(
               backgroundColor: Color.fromRGBO(233, 235, 239, 1),
               body: MainScreenSettings.navbarPages(
                   devicesize, currentindex)[currentindex],
